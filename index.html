@@ -25,28 +25,37 @@
             </div>
             <div class="gambar">
                 <img src="img/gambar-persegi.jpg" alt="Gambar Persegi">
+                <p>bujur sangkar</p>
             </div>
             <div class="text">
-                <p>Rumus Luas Persegi yaitu:</p>
+                <h4>Rumus Luas Persegi yaitu:</h4>
                 <p>L = S x S</p>
                 <p>Di mana :</p>
                 <p>L = Luas</p>
                 <p>S = Sisi</p>
             </div>
-            </div class="nilai-luas">
+            <!--mulai: untuk hitung nilai luas persegi-->
+            <div class="nilai-luas">
                 <h3>Hitung Luas Persegi</h3>
-                <input id="sisi-luas" name="sisi-luas" type="number" placeholder="Nilai Sisi" required/>
-                <div class="hasil-luas">
-
+                <input id="nilai-sisi-luas" name="nilai-sisi-luas" type="number" placeholder="Nilai Sisi (dalam cm)" required/>
+                <div class="hasil-luas" id="hasilLuas">
+                    <p class="result-luas" id="rumus-luas">L = S x S</p>
+                    <p class="result-luas" id="perhitungan-luas"></p>
+                    <p class="result-luas2">
+                        L = <span id="output-nilai-sisi2"></span> x <span id="output-nilai-sisi2"></span>
+                    </p>
+                    <p class="result-luas2"><span id="result-akhir"></span></p>
+                    <p class="result-luas">L = <span id="result"></span> cm&sup2;</p>
                 </div>
                 <span>
-                    <button class="btn-hitung" name="hitung-luas">Hitung</button>
+                    <button class="btn-hitung" id="btn-hitung" name="hitung-luas" onClick="hitungLsPersegi()">Hitung</button>
                 </span>
                 <span>
-                    <button class="btn-reset" name="reset-luas">Reset</button>
+                    <button class="btn-reset" id="btn-reset" name="reset-luas" onClick="resetLsPersegi()">Reset</button>
                 </span>
-            </div>
+            </div>    
         </div>
+        <!--akhir: untuk hitung nilai luas persegi-->
     </section>
     <footer>
 
