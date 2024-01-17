@@ -29,3 +29,20 @@ function hitungLsPersegi() {
     var elemen = document.getElementById("hasilLuas");
     elemen.style.display = "none";
   }
+// Logic fungsi input penghitung keliling
+function hitungKelPersegi() {
+    var sisiKeliling = document.getElementById("nilai-sisi-keliling").value;
+    var output = document.getElementById("output-keliling");
+  
+    document.getElementById("rumus-keliling").innerHTML = "K = 4 x " + sisiKeliling;
+    document.getElementById("result-keliling").innerHTML = 4 * sisiKeliling;
+  
+    output.style.display = "block";
+  }
+  
+  // Logic reset keliling persegi
+  function resetKelPersegi(flag) {
+    document.getElementById("output-keliling").style.display =
+      flag === 1 ? "block" : "none";
+    document.getElementById("nilai-sisi-keliling").value = "";
+  }
