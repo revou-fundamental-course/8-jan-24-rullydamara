@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Matematik | Rulli Damara</title>
+    <link href="https://fonts.cdnfonts.com/css/haarlem-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bree-serif-lt-2" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -18,13 +20,14 @@
             <p>Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas dan keliling bangun datar</p>
         </div>
     </main>
+    <!--mulai: luas persegi-->
     <section>
         <div class="luas" id="luas">
             <div class="header-item">
                 <h2>Luas Persegi</h2>
             </div>
             <div class="gambar">
-                <img src="img/gambar-persegi.jpg" alt="Gambar Persegi">
+                <img src="https://mahasuryaprabadewi.files.wordpress.com/2011/11/persegi.jpg" alt="Gambar Persegi">
                 <p>bujur sangkar</p>
             </div>
             <div class="text">
@@ -37,28 +40,74 @@
             <!--mulai: untuk hitung nilai luas persegi-->
             <div class="nilai-luas">
                 <h3>Hitung Luas Persegi</h3>
-                <input id="nilai-sisi-luas" name="nilai-sisi-luas" type="number" placeholder="Nilai Sisi (dalam cm)" required/>
-                <div class="hasil-luas" id="hasilLuas">
+                <div>
+                    <input id="nilai-sisi-luas" name="nilai-sisi-luas" type="number" placeholder="Nilai Sisi (dalam cm)" required/>
+                </div>
+                <div id="hasilLuas" class="hasil-luas">
                     <p class="result-luas" id="rumus-luas">L = S x S</p>
                     <p class="result-luas" id="perhitungan-luas"></p>
                     <p class="result-luas2">
-                        L = <span id="output-nilai-sisi2"></span> x <span id="output-nilai-sisi2"></span>
+                        L = <span id="output-nilai-sisi"></span> x <span id="output-nilai-sisi2"></span>
                     </p>
                     <p class="result-luas2"><span id="result-akhir"></span></p>
                     <p class="result-luas">L = <span id="result"></span> cm&sup2;</p>
                 </div>
-                <span>
-                    <button class="btn-hitung" id="btn-hitung" name="hitung-luas" onClick="hitungLsPersegi()">Hitung</button>
-                </span>
-                <span>
-                    <button class="btn-reset" id="btn-reset" name="reset-luas" onClick="resetLsPersegi()">Reset</button>
-                </span>
-            </div>    
+                <div>
+                    <span class="hitung">
+                        <button class="btn-hitung" id="btn-hitung" name="hitung-luas" onClick="hitungLsPersegi()">Hitung</button>
+                    </span>
+                    <span class="reset">
+                        <button class="btn-reset" id="btn-reset" name="reset-luas" onClick="resetLsPersegi()">Reset</button>
+                    </span>
+                </div>
+            </div>
+            <!--akhir: untuk hitung nilai luas persegi-->    
         </div>
-        <!--akhir: untuk hitung nilai luas persegi-->
+        <!--akhir: luas persegi-->
+    </section>
+    <section>
+        <!--mulai: keliling persegi-->
+        <div class="keliling" id="keliling">
+            <div class="header-item">
+                <h2>Keliling Persegi</h2>
+            </div>
+            <div class="gambar">
+                <img src="https://mahasuryaprabadewi.files.wordpress.com/2011/11/persegi.jpg" alt="Gambar Persegi">
+                <p>bujur sangkar</p>
+            </div>
+            <div class="text">
+                <h4>Rumus Keliling Persegi yaitu:</h4>
+                <p>K = 4 x S</p>
+                <p>Di mana :</p>
+                <p>K = Keliling</p>
+                <p>S = Sisi</p>
+            </div>
+            <!--mulai: untuk hitung nilai keliling persegi-->
+            <div class="nilai-keliling">
+                <h3>Hitung Keliling Persegi</h3>
+                <div>
+                    <input id="nilai-sisi-keliling" name="nilai-sisi-keliling" type="number" placeholder="Nilai Sisi (dalam cm)" required/>
+                </div>
+                <div id="output-keliling" class="output-keliling">
+                    <p class="rumus-keliling">K = 4 x S</p>
+                    <p id="rumus-keliling"></p>
+                    <p class="result-keliling">K = <span id="result-keliling"></span> cm&sup2;</p>
+                </div>
+                <div>
+                    <span class="hitung">
+                        <button class="btn-hitung" id="btn-hitung" name="hitung-keliling" onClick="hitungKelPersegi()">Hitung</button>
+                    </span>
+                    <span class="reset">
+                        <button class="btn-reset" id="btn-reset" name="reset-keliling" onClick="resetKelPersegi()">Reset</button>
+                    </span>
+                </div>
+            </div>
+            <!--akhir: untuk hitung nilai keliling persegi-->    
+        </div>
+        <!--akhir: keliling persegi-->
     </section>
     <footer>
-
+        <h6>Rulli Damara Putra | Kalkulator Matematik</h6>
     </footer>
 </body>
 <script src="js/script.js"></script>
