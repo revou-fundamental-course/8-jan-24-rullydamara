@@ -1,7 +1,12 @@
 // Logic fungsi  hitung luas persegi
 function hitungLsPersegi() {
     var sisiLuas = document.getElementById("nilai-sisi-luas").value;
-  
+    // validasi input
+    if (isNaN(sisiLuas) || sisiLuas <= 0) {
+      alert("Masukkan panjang sisi yang valid.");
+      return;
+    }
+    
     document.getElementById("output-nilai-sisi").innerHTML =
       "<span>" + sisiLuas + "</span>";
     console.log(sisiLuas);
@@ -32,6 +37,12 @@ function hitungLsPersegi() {
 // Logic fungsi input penghitung keliling
 function hitungKelPersegi() {
     var sisiKeliling = document.getElementById("nilai-sisi-keliling").value;
+    // validasi input
+    if (isNaN(sisiKeliling) || sisiKeliling <= 0) {
+      alert("Masukkan panjang sisi yang valid.");
+      return;
+    }
+
     var output = document.getElementById("output-keliling");
   
     document.getElementById("rumus-keliling").innerHTML = "K = 4 x " + sisiKeliling;
